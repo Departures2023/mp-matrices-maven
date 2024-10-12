@@ -1,10 +1,9 @@
 package edu.grinnell.csc207.experiments;
 
+import java.io.PrintWriter;
 import edu.grinnell.csc207.util.ArraySizeException;
 import edu.grinnell.csc207.util.Matrix;
 import edu.grinnell.csc207.util.MatrixV0;
-
-import java.io.PrintWriter;
 
 /**
  * Some experiments with matrices.

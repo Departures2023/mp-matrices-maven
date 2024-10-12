@@ -81,8 +81,8 @@ public class MatrixV0<T> implements Matrix<T> {
    *   If either the row or column is out of reasonable bounds.
    */
   public T get(int row, int col) {
-    if (col > this.width - 1 || row > this.height - 1) {
-      throw new IndexOutOfBoundsException();
+    if (row < 0 || row >= this.height || col < 0 || col >= this.width) {
+      throw new IndexOutOfBoundsException("row: " + row + "   col" + col);
     }
     return this.arr[row][col];
   } // get(int, int)
@@ -101,8 +101,8 @@ public class MatrixV0<T> implements Matrix<T> {
    *   If either the row or column is out of reasonable bounds.
    */
   public void set(int row, int col, T val) {
-    if (col > this.width - 1 || row > this.height - 1) {
-      throw new IndexOutOfBoundsException();
+    if (row < 0 || row >= this.height || col < 0 || col >= this.width) {
+      throw new IndexOutOfBoundsException("row: " + row + "   col" + col);
     }
     this.arr[row][col] = val;
   } // set(int, int, T)
