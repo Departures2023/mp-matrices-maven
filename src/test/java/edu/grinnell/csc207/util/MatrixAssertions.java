@@ -1,9 +1,8 @@
 package edu.grinnell.csc207.util;
 
+import static org.junit.jupiter.api.Assertions.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * {@code Assertions} is a collection of utility methods that support asserting
@@ -34,7 +33,7 @@ class MatrixAssertions {
     PrintWriter pen = new PrintWriter(stringWriter);
     Matrix.print(pen, matrix, false);
     String output = stringWriter.toString();
-    try { 
+    try {
       stringWriter.close();
     } catch (Exception e) {
     } // try/catch
